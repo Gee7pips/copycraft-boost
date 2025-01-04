@@ -2,36 +2,33 @@ import { Check } from "lucide-react";
 
 const services = [
   {
-    title: "Email Sequence",
-    price: "$997",
+    title: "Email Sequence Creation",
     description: "Convert subscribers into loyal customers",
     features: [
-      "Welcome sequence (5 emails)",
-      "Sales sequence optimization",
-      "A/B testing strategy",
-      "Performance analytics",
+      "Engaging welcome sequences",
+      "Strategic sales funnels",
+      "A/B testing optimization",
+      "Performance tracking",
     ],
   },
   {
-    title: "Campaign Optimization",
-    price: "$1,497",
-    description: "Maximize your email marketing ROI",
+    title: "Campaign Development",
+    description: "Maximize your email marketing impact",
     features: [
-      "Full campaign audit",
-      "Copy optimization",
-      "Subject line testing",
-      "Conversion tracking",
+      "In-depth campaign analysis",
+      "Compelling copy creation",
+      "Subject line optimization",
+      "Conversion strategy",
     ],
   },
   {
-    title: "Full Management",
-    price: "Custom",
+    title: "Full Email Management",
     description: "End-to-end email marketing solution",
     features: [
-      "Strategy development",
-      "Content calendar",
-      "Ongoing optimization",
-      "Monthly reporting",
+      "Custom strategy development",
+      "Content calendar planning",
+      "Continuous optimization",
+      "Detailed reporting",
     ],
   },
 ];
@@ -44,9 +41,9 @@ export const Services = () => {
           <span className="inline-block px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium mb-6">
             Services
           </span>
-          <h2 className="section-title">Choose Your Path to Growth</h2>
+          <h2 className="section-title">Expert Email Solutions</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Select the perfect package to elevate your email marketing strategy
+            Elevate your email marketing with professional South African copywriting expertise
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 animate-stagger">
@@ -55,7 +52,6 @@ export const Services = () => {
               <h3 className="text-2xl font-display font-semibold mb-2">
                 {service.title}
               </h3>
-              <div className="text-3xl font-bold mb-4">{service.price}</div>
               <p className="text-muted-foreground mb-6">{service.description}</p>
               <ul className="space-y-4">
                 {service.features.map((feature, i) => (
@@ -65,7 +61,7 @@ export const Services = () => {
                   </li>
                 ))}
               </ul>
-              <button className="btn-primary w-full mt-8">Get Started</button>
+              <button className="btn-primary w-full mt-8">Learn More</button>
             </div>
           ))}
         </div>

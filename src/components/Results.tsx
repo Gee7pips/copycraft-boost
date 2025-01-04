@@ -2,7 +2,7 @@ const stats = [
   { number: "150%", label: "Average ROI Increase" },
   { number: "45%", label: "Open Rate Improvement" },
   { number: "3.2x", label: "Click-Through Rate" },
-  { number: "28%", label: "Revenue Growth" },
+  { number: "R280K+", label: "Additional Revenue Generated" },
 ];
 
 export const Results = () => {
@@ -13,9 +13,9 @@ export const Results = () => {
           <span className="inline-block px-4 py-2 bg-accent rounded-full text-sm font-medium mb-6">
             Proven Results
           </span>
-          <h2 className="section-title">Numbers That Speak Volumes</h2>
+          <h2 className="section-title">Real Results for South African Businesses</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real results from real clients. Here's what we've achieved together.
+            See how professional email copywriting has transformed local businesses.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 animate-stagger">
