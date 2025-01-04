@@ -28,7 +28,7 @@ export const Benefits = () => {
     <section className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-up">
-          <span className="inline-block px-4 py-2 bg-accent rounded-full text-sm font-medium mb-6">
+          <span className="inline-block px-4 py-2 bg-accent rounded-full text-sm font-medium mb-6 hover:scale-105 transition-all duration-300">
             Why Choose Professional Copywriting
           </span>
           <h2 className="section-title">Transform Your Email Marketing</h2>
@@ -36,11 +36,15 @@ export const Benefits = () => {
             Discover how professional copywriting can revolutionize your email campaigns
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 animate-stagger">
+        <div className="grid md:grid-cols-2 gap-12">
           {benefits.map((benefit, index) => (
-            <div key={index} className="flex gap-6">
+            <div 
+              key={index} 
+              className="flex gap-6 hover:scale-105 transition-all duration-300 animate-slide-in"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center animate-pulse">
                   <benefit.icon className="w-6 h-6 text-secondary" />
                 </div>
               </div>
