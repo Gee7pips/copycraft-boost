@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -48,7 +49,11 @@ export const Services = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-8 animate-stagger">
           {services.map((service, index) => (
-            <div key={index} className="card p-8">
+            <div 
+              key={index} 
+              className="card p-8 hover:scale-105 transition-transform duration-300"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               <h3 className="text-2xl font-display font-semibold mb-2">
                 {service.title}
               </h3>
@@ -61,7 +66,7 @@ export const Services = () => {
                   </li>
                 ))}
               </ul>
-              <button className="btn-primary w-full mt-8">Learn More</button>
+              <Link to="/services" className="btn-primary w-full mt-8">Learn More</Link>
             </div>
           ))}
         </div>
