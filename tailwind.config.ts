@@ -74,11 +74,25 @@ export default {
             opacity: "1",
           },
         },
+        "parallax-scroll": {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "100%": {
+            transform: "translateY(-5%)",
+          },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out forwards",
         "fade-in": "fade-in 0.3s ease-out forwards",
         "slide-in": "slide-in 0.5s ease-out forwards",
+        "parallax-scroll": "parallax-scroll 1s ease-out forwards",
+      },
+      borderRadius: {
+        'xl': '1rem',
+        '2xl': '1.5rem',
+        '3xl': '2rem',
       },
     },
   },

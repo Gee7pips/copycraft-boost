@@ -4,6 +4,7 @@ import { Services } from "@/components/Services";
 import { Benefits } from "@/components/Benefits";
 import { Results } from "@/components/Results";
 import { Contact } from "@/components/Contact";
+import { initParallax } from "@/utils/parallax";
 
 const Index = () => {
   useEffect(() => {
@@ -24,7 +25,12 @@ const Index = () => {
       observer.observe(element);
     });
 
-    return () => observer.disconnect();
+    const cleanup = initParallax();
+
+    return () => {
+      observer.disconnect();
+      cleanup();
+    };
   }, []);
 
   return (
