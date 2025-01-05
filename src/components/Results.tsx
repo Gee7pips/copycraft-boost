@@ -30,11 +30,11 @@ export const Results = () => {
     <section className="py-20 px-4 parallax-container">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-up parallax-element">
-          <span className="inline-block px-4 py-2 bg-accent/10 backdrop-blur-sm rounded-xl text-sm font-medium mb-6">
+          <span className="inline-block px-4 py-2 bg-secondary/20 backdrop-blur-sm rounded-xl text-sm font-medium mb-6 text-secondary">
             Real Results
           </span>
-          <h2 className="section-title text-white">Copy That Converts</h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <h2 className="section-title text-white mb-4">Copy That Converts</h2>
+          <p className="text-lg text-white/90 max-w-2xl mx-auto">
             Here are some real examples of emails that delivered exceptional results for South African businesses.
           </p>
         </div>
@@ -42,7 +42,7 @@ export const Results = () => {
           {emailExamples.map((example, index) => (
             <div 
               key={index} 
-              className="card p-6 hover:scale-105 transition-all duration-300 parallax-element"
+              className="card p-6 hover:scale-105 transition-all duration-300 parallax-element bg-white/10 backdrop-blur-md"
               style={{ transform: `translateY(${index * 10}px)` }}
             >
               <div className="text-sm text-secondary font-medium mb-2">
@@ -51,7 +51,7 @@ export const Results = () => {
               <h3 className="text-xl font-semibold mb-3 text-white">
                 {example.subject}
               </h3>
-              <p className="text-white/80 mb-4 text-sm">
+              <p className="text-white/90 mb-4 text-sm">
                 {example.preview}
               </p>
               <div className="text-secondary font-medium text-sm">
