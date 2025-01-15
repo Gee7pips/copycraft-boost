@@ -14,7 +14,7 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-primary to-secondary min-h-screen text-foreground font-sans;
+    @apply bg-gradient-to-br from-primary via-secondary to-accent min-h-screen text-foreground font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -24,25 +24,27 @@
 
 @layer components {
   .hero-title {
-    @apply text-4xl md:text-6xl font-display font-bold leading-tight;
+    @apply text-4xl md:text-6xl font-display font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-display font-semibold mb-6;
+    @apply text-3xl md:text-4xl font-display font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/90;
   }
 
   .card {
-    @apply bg-white/10 backdrop-blur-md rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md;
+    @apply bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl border border-white/10;
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-6 py-3 rounded-xl font-medium 
-           transition-all duration-300 hover:opacity-90 inline-flex items-center gap-2;
+    @apply bg-secondary text-white px-6 py-3 rounded-xl font-medium 
+           transition-all duration-300 hover:opacity-90 inline-flex items-center gap-2
+           hover:scale-105 hover:shadow-lg;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-xl font-medium 
-           transition-all duration-300 hover:opacity-90 inline-flex items-center gap-2;
+    @apply bg-accent text-white px-6 py-3 rounded-xl font-medium 
+           transition-all duration-300 hover:opacity-90 inline-flex items-center gap-2
+           hover:scale-105 hover:shadow-lg;
   }
 
   .scroll-reveal {
@@ -59,6 +61,11 @@
 
   .parallax-element {
     @apply transform transition-transform duration-500 ease-out will-change-transform;
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 
+           shadow-lg hover:shadow-xl transition-all duration-300;
   }
 }
 
@@ -81,4 +88,19 @@
 .parallax-scroll {
   transform: translateY(var(--scroll-offset));
   transition: transform 0.1s ease-out;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+.scale-on-scroll {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.5s ease-out;
+}
+
+.scale-on-scroll.visible {
+  opacity: 1;
+  transform: scale(1);
 }

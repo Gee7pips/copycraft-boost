@@ -29,16 +29,16 @@ export default {
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#9b87f5",
-          foreground: "#1A1F2C",
+          DEFAULT: "#8B5CF6",
+          foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#F1F1F1",
-          foreground: "#1A1F2C",
+          DEFAULT: "#D946EF",
+          foreground: "#FFFFFF",
         },
         muted: {
           DEFAULT: "#F1F1F1",
-          foreground: "#8E9196",
+          foreground: "#6E59A5",
         },
       },
       fontFamily: {
@@ -82,12 +82,32 @@ export default {
             transform: "translateY(-5%)",
           },
         },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
+        "scale-fade": {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.95)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out forwards",
         "fade-in": "fade-in 0.3s ease-out forwards",
         "slide-in": "slide-in 0.5s ease-out forwards",
         "parallax-scroll": "parallax-scroll 1s ease-out forwards",
+        "float": "float 3s ease-in-out infinite",
+        "scale-fade": "scale-fade 0.5s ease-out forwards",
       },
       borderRadius: {
         'xl': '1rem',

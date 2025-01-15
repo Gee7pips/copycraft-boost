@@ -27,13 +27,13 @@ const emailExamples = [
 
 export const Results = () => {
   return (
-    <section className="py-20 px-4 parallax-container">
+    <section className="py-20 px-4 parallax-container bg-gradient-to-br from-primary/90 to-secondary/90">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-up parallax-element">
-          <span className="inline-block px-4 py-2 bg-secondary/20 backdrop-blur-sm rounded-xl text-sm font-medium mb-6 text-secondary">
+          <span className="inline-block px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-xl text-sm font-medium mb-6 text-white">
             Real Results
           </span>
-          <h2 className="section-title text-white mb-4">Copy That Converts</h2>
+          <h2 className="section-title mb-4">Copy That Converts</h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
             Here are some real examples of emails that delivered exceptional results for South African businesses.
           </p>
@@ -42,19 +42,22 @@ export const Results = () => {
           {emailExamples.map((example, index) => (
             <div 
               key={index} 
-              className="card p-6 hover:scale-105 transition-all duration-300 parallax-element bg-white/10 backdrop-blur-md"
-              style={{ transform: `translateY(${index * 10}px)` }}
+              className="glass-card p-8 hover:scale-105 transition-all duration-300 parallax-element"
+              style={{ 
+                transform: `translateY(${index * 10}px)`,
+                animationDelay: `${index * 0.2}s`
+              }}
             >
-              <div className="text-sm text-secondary font-medium mb-2">
+              <div className="text-accent font-medium mb-3">
                 {example.type}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white">
                 {example.subject}
               </h3>
-              <p className="text-white/90 mb-4 text-sm">
+              <p className="text-white/90 mb-4 text-sm leading-relaxed">
                 {example.preview}
               </p>
-              <div className="text-secondary font-medium text-sm">
+              <div className="text-secondary font-medium text-sm bg-white/10 p-3 rounded-xl">
                 Result: {example.result}
               </div>
             </div>
